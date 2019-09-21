@@ -1,13 +1,18 @@
 import React from 'react';
-
+import {BrowserRouter as Router, Route,Link} from 'react-router-dom'
 import './App.css';
 import {StyledHeader} from './components/Header'
-
-const  App = (props) => {
+import Register from './pages/Register';
+import Home from './pages/Home'
+const  App = () => {
   return (
-    
+    <Router>
+ <StyledHeader>VR Funding</StyledHeader>
+<Route exact path="/" component={Home}/>
+<Route path="/register" component={Register}/>
+ </Router>
 
-   <StyledHeader>VR Funding</StyledHeader>
+  
 
   );
 }
