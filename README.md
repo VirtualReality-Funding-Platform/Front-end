@@ -1,9 +1,9 @@
-# Front-end
+#VR Connect
 
-Social Network Connect for virtual reality 
+#front end
 
 
-Product Vision
+#Product Vision
 
 Proposal
 - What problem does your app solve?
@@ -39,7 +39,10 @@ Underprivileged developers
 
 
 This project was bootstrapped with Create React App.
-
+Clone or download onto your local machine.
+cd into vr_connect
+Run yarn add or npm install
+Run yarn start or npm run start to start up the dev server.
 
 
 
