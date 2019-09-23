@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mmongodb+srv://cmoney:cmoney222@vrconnector-zltic.mongodb.net/test?retryWrites=true&w=majority"
+    "mongoURI": "mmongodb+srv://cmoney:cmoney222@vrconnector-zltic.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "thesecrettoken"
 }

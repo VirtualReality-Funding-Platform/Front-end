@@ -1,9 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const { check, validationResult } = require('express-validator/check');
 const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const config = require('config');
+const { check, validationResult } = require('express-validator/check');
+
 const User = require('../../models/User');
+
+
 
 // @route              POST api/users
 // @description        register user
@@ -32,7 +37,7 @@ router.post(
             let user = await User.findOne({ email });
 
             if(user) {
-                res.status(400).json({ errors: [{ msg: 'User already exists' }] });
+                return res.status(400).json({ errors: [{ msg: 'User already exists' }] });
             }
 
 
@@ -61,11 +66,22 @@ router.post(
 
         await user.save();
 
+          const payload = {
+            user: {
+              id: user.id
+            }
+          }
+
+          jwt.sign(
+            payload, 
+            config.get('jwtSecret'),
+            {expiresIn: 36000 },
+            (err, token) => {
+              if(err) throw err;
+              res.json({ token });
+            });
 
 
-        //return jsonwebtoken
-
-        res.send('User registered');
 
         } catch (err) {
             console.error(err.message);
