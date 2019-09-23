@@ -1,4 +1,4 @@
-#VR Connect#
+<h1>VR Connect</h1>
 
 #front end
 
