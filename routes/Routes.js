@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import RegisterForm from '../Register/RegisterForm';
-import LoginForm from "../Login/LoginForm";
-import Alert from './../layout/Alert';
-import Dashboard from '../dashboards/Dashboard';
+import RegisterForm from '../vr-fund-front/src/components/Register/RegisterForm';
+import LoginForm from "../vr-fund-front/src/components/Login/LoginForm";
+import Alert from '../vr-fund-front/src/components/layout/Alert';
+import Dashboard from '../vr-fund-front/src/components/dashboards/Dashboard';
 
 const Routes = () => {
     return (

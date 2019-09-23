@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import setAlert  from './../routes/Routes'
+import setAlert  from '../../../../routes/Routes'
 import {connect} from 'react-redux'
 const Alert =  setAlert =>
   setAlert !== null &&

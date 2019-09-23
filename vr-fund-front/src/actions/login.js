@@ -6,7 +6,7 @@ import {
   USER_LOADED,
   AUTH_ERROR,
   LOGIN_SUCCESS,
-  eLOGIN_FAIL,
+  LOGIN_FAIL,
   LOGOUT,
   CLEAR_PROFILE
 } from './types';
