@@ -3,7 +3,7 @@ import React from 'react';
 function Home() {
   return (
     <div>
-      <p>Home Page</p>
+      <h1>Welcome To VR Funding Platform</h1>
     </div>
   ) 
 }
