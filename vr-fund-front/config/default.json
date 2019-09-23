@@ -1,0 +1,6 @@
+{
+    "mongoURI": "mongodb+srv://mharley12345:junior4210@@cluster0-rhtlt.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "secret",
+    "githubClientId": "",
+    "githubSecret": ""
+  }

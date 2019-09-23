@@ -1,5 +1,12 @@
 
 {
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
   "name": "vr-fund-front",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +15,7 @@
     "@okta/okta-react": "^1.2.3",
     "@okta/okta-signin-widget": "^3.2.1",
     "axios": "^0.19.0",
+
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^4.1.2",
@@ -17,6 +25,15 @@
     "express-validator": "^5.3.1",
     "gravatar": "^1.8.0",
     "jsonwebtoken": "^8.5.1",
+
+    "mongoose": "^5.5.1",
+    "nodemon": "^1.19.2",
+    "prop-types": "^15.7.2",
+    "request": "^2.88.0"
+  },
+  "concurrently": "^4.1.0",
+  "nodemon": "^1.18.11"
+
     "material-ui": "^0.20.2",
     "mongoose": "^5.5.1",
     "nodemon": "^1.18.11",
@@ -99,5 +116,6 @@
     ]
   },
   "proxy": "http://localhost:5000"
+
 }
 
