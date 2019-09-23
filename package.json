@@ -39,7 +39,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-{
+  },
   "name": "vr-fund-front",
   "version": "0.1.0",
   "private": true,
