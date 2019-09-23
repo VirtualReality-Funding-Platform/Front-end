@@ -1,3 +1,4 @@
+
 <h1>VR Connect</h1>
 
 #front end
@@ -43,6 +44,7 @@ Clone or download onto your local machine.
 cd into vr_connect
 Run yarn add or npm install
 Run yarn start or npm run start to start up the dev server.
+
 
 
 
