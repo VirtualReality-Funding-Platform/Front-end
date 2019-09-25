@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-#Vr Connnect 
-# Front-end 
- 
-=======
 
-<h1>VR Connect</h1>
+<h1>VR Connect</h1ls>
 
 #front end
 
@@ -53,4 +48,3 @@ Run yarn start or npm run start to start up the dev server.
 
 
 
->>>>>>> 334cfd32f2498c1e1462e10b959e9f7d2e426907
