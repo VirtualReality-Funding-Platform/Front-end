@@ -51,7 +51,7 @@ const Createprofile = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getCurrentProfile]);
   return loading && profile === null ? (
-    <Redirect to='/dashboard' />
+    <Redirect to='/' />
   ) : (
     <Fragment>
       <h1 className='large text-primary'>Create Your Profile</h1>
@@ -211,7 +211,7 @@ const Createprofile = ({
           </Fragment>
         )} */}
         <input type='submit' className='btn btn-primary my-1' />
-        <Link className='btn btn-light my-1' to='/dashboard'>
+        <Link className='btn btn-light my-1' to='/'>
           Go Back
         </Link>
       </form>

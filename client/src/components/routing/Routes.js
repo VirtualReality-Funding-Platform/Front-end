@@ -21,7 +21,7 @@ const Routes = () => {
     <section className='container'>
       <Alert />
       <Switch>
-        <PrivateRoute path='/create-profile' component={CreateProfile}/>
+        <Route path='/create-profile' component={CreateProfile}/>
         <Route exact path='/register' component={Register} />
         <Route exact path='/login' component={Login} />
          {/* <Route exact path='/profiles' component={Profiles} />

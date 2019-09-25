@@ -192,7 +192,7 @@ export const addProject = (formData, history) => async dispatch => {
 };
 export const deleteExperience = id => async dispatch => {
   try {
-    const res = await axios.delete(URL,`/api/profile/experience/${id}`);
+    const res = await axios.delete('https://reqres.in/api/users/2');
 
     dispatch({
       type: UPDATE_PROFILE,
@@ -244,7 +244,7 @@ export const getProjects = (formData, history) => async dispatch => {
 // Delete Project
 export const deleteProject= id => async dispatch => {
   try {
-    const res = await axios.delete(`/api/profile/project/${id}`);
+    const res = await axios.delete(`https://reqres.in/api/users/2`);
 
     dispatch({
       type: UPDATE_PROFILE,
@@ -263,7 +263,7 @@ export const deleteProject= id => async dispatch => {
 // Delete education
 export const deleteEducation = id => async dispatch => {
   try {
-    const res = await axios.delete(`/api/profile/education/${id}`);
+    const res = await axios.delete('https://reqres.in/api/users/2');
 
     dispatch({
       type: UPDATE_PROFILE,
@@ -283,7 +283,7 @@ export const deleteEducation = id => async dispatch => {
 export const deleteAccount = () => async dispatch => {
   if (window.confirm('Are you sure? This can NOT be undone!')) {
     try {
-      await axios.delete('/api/profile');
+      await axios.delete('https://reqres.in/api/users/2');
 
       dispatch({ type: CLEAR_PROFILE });
       dispatch({ type: ACCOUNT_DELETED });
