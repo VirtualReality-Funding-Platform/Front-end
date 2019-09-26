@@ -25,7 +25,7 @@ const Createprofile = ({
     youtube: "",
     instagram: "",
   });
-  const [displaySocialInputs, toggleSocialInputs] = useState(false);
+
   const {
     projects,
     website,
@@ -34,11 +34,8 @@ const Createprofile = ({
     skills,
     githubusername,
     bio,
-    twitter,
-    facebook,
-    linkedin,
-    youtube,
-    instagram,
+  
+  
   } = formData;
   const onChange = e =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -51,7 +48,7 @@ const Createprofile = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getCurrentProfile]);
   return loading && profile === null ? (
-    <Redirect to='/' />
+    <Redirect to='/dashboard' />
   ) : (
     <Fragment>
       <h1 className='large text-primary'>Create Your Profile</h1>
@@ -66,12 +63,7 @@ const Createprofile = ({
             <option value='0'>* Account Type</option>
             <option value='Entrepreneur'>Entrepreneur</option>
             <option value='Investor'>Investor</option>
-            {/* <option value='Senior Developer'>Senior Developer</option>
-            <option value='Manager'>Manager</option>
-            <option value='Student or Learning'>Student or Learning</option>
-            <option value='Instructor'>Instructor or Teacher</option>
-            <option value='Intern'>Intern</option>
-            <option value='Other'>Other</option> */}
+ 
           </select>
           <small className='form-text'>
           Please Select Account Type!
@@ -146,70 +138,7 @@ const Createprofile = ({
           />
           <small className='form-text'>This is you chance to sell yourself. Let an investor know why they should invest in you!</small>
         </div>
-        {/* <div className='my-2'>
-          <button
-            onClick={() => toggleSocialInputs(!displaySocialInputs)}
-            type='button'
-            className='btn btn-light'
-          >
-            Add Social Network Links
-          </button>
-          <span>Optional</span>
-        </div> 
-           {displaySocialInputs && (
-          <Fragment>
-            <div className='form-group social-input'>
-              <i className='fab fa-twitter fa-2x' />
-              <input
-                type='text'
-                placeholder='Twitter URL'
-                name='twitter'
-                value={twitter}
-                onChange={e => onChange(e)}
-              />
-            </div>
-            <div className='form-group social-input'>
-              <i className='fab fa-facebook fa-2x' />
-              <input
-                type='text'
-                placeholder='Facebook URL'
-                name='facebook'
-                value={facebook}
-                onChange={e => onChange(e)}
-              />
-            </div>
-            <div className='form-group social-input'>
-              <i className='fab fa-youtube fa-2x' />
-              <input
-                type='text'
-                placeholder='YouTube URL'
-                name='youtube'
-                value={youtube}
-                onChange={e => onChange(e)}
-              />
-            </div>
-            <div className='form-group social-input'>
-              <i className='fab fa-linkedin fa-2x' />
-              <input
-                type='text'
-                placeholder='Linkedin URL'
-                name='linkedin'
-                value={linkedin}
-                onChange={e => onChange(e)}
-              />
-            </div>
-            <div className='form-group social-input'>
-              <i className='fab fa-instagram fa-2x' />
-              <input
-                type='text'
-                placeholder='Instagram URL'
-                name='instagram'
-                value={instagram}
-                onChange={e => onChange(e)}
-              />
-            </div>
-          </Fragment>
-        )} */}
+
         <input type='submit' className='btn btn-primary my-1' />
         <Link className='btn btn-light my-1' to='/'>
           Go Back

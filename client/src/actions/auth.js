@@ -8,7 +8,7 @@ import {
   LOGIN_SUCCESS,
   LOGIN_FAIL,
   LOGOUT,
-  CLEAR_PROFILE
+
 } from './types';
 import setAuthToken from '../utils/setAuthToken';
 
@@ -19,7 +19,7 @@ export const loadUser = () => async dispatch => {
   }
 
   try {
-    const res = await axios.get('https://reqres.in/api/login');
+    const res = await axios.get('http://ywyuasdpftxfrnn.form.io/user/login/submission');
 
     dispatch({
       type: USER_LOADED,
@@ -75,7 +75,7 @@ export const login = (email, password) => async dispatch => {
   const body = JSON.stringify({ email, password });
 
   try {
-    const res = await axios.post('https://reqres.in/api/login', body, config);
+    const res = await axios.post(' http://localhost:5000/api/login', body, config);
 
     dispatch({
       type: LOGIN_SUCCESS,
@@ -84,9 +84,9 @@ export const login = (email, password) => async dispatch => {
 
     dispatch(loadUser());
   } catch (err) {
-    const errors = err.response.data.errors;
+    const errors = err.response;
 
-    if (errors) {
+    if (err) {
       errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
     }
 
@@ -98,6 +98,6 @@ export const login = (email, password) => async dispatch => {
 
 // Logout / Clear Profile
 export const logout = () => dispatch => {
-  dispatch({ type: CLEAR_PROFILE });
+
   dispatch({ type: LOGOUT });
 };

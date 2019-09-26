@@ -8,16 +8,13 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <ul>
       <li>
-        <Link to='/Ent'>Entrepreneurs</Link>
+        {/* <Link to='/Ent'>Entrepreneurs</Link>  */}
       </li>
       <li>
-        <Link to='/projects'>Projects</Link>
+        {/* <Link to='/projects'>Projects</Link> */}
       </li>
       <li>
-        <Link to='/dashboard'>
-          <i className='fas fa-user' />{' '}
-          <span className='hide-sm'>Dashboard</span>
-        </Link>
+        
       </li>
       <li>
         <a onClick={logout} href='#!'>
@@ -28,30 +25,54 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
     </ul>
   );
 
-  const guestLinks = (
-    <ul>
-      <li>
-        <Link to='/profiles'>Entrepreneurs</Link>
-      </li>
-      <li>
-        <Link to='/register'>Register</Link>
-      </li>
-      <li>
-        <Link to='/login'>Login</Link>
-      </li>
-    </ul>
-  );
+  // const guestLinks = (
+  //   <ul>
+  //     <li>
+  //       <Link to='/profiles'>Entrepreneurs</Link>
+  //     </li>
+  //     <li>
+  //       <Link to='/register'>Register</Link>
+  //     </li>
+  //     <li>
+  //       <Link to='/login'>Login</Link>
+  //     </li>
+  //   </ul>
+  // );
 
   return (
     <nav className='navbar bg-dark'>
       <h1>
         <Link to='/'>
-          <i className='fas fa-code' /> DevConnector
+          <i className='fas fa-code' /> VR Connect 
         </Link>
       </h1>
       {!loading && (
-        <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
+        <Fragment>{isAuthenticated ? authLinks : null}</Fragment>
       )}
+        <ul>
+          <li>
+        <Link to='/dashboard'>
+          <i className='fas fa-user' />{' '}
+          <span className='hide-sm'>Dashboard</span>
+          
+        </Link>
+        </li>
+          <li>
+          <Link to='/projects'>Projects</Link>
+          </li>
+
+      <li>
+        <Link to='/Ent'>Entrepreneurs</Link>
+      </li>
+      
+      <li>
+        <Link to='/register'>Register</Link>
+      </li>
+      
+      <li>
+        <Link to='/login'>Login</Link>
+      </li>
+    </ul>
     </nav>
   );
 };
