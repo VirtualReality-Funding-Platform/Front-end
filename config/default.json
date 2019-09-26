@@ -1,6 +1,6 @@
 {
   "mongoURI": "mongodb+srv://cmoney:cmoney222@vrconnector-zltic.mongodb.net/test?retryWrites=true&w=majority",
   "jwtSecret": "thesecrettoken",
-  "githubClientId": "",
-  "githubSecret": ""
+  "githubClientId": "24219c0672d17ce1978d",
+  "githubSecret": "d243780bbf8bfecf7a87164ce03a8fb20a253da2"
 }
