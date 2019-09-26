@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> 8fe7cf46f7d3ed645af243a6541f0306b86430a0
 
-<h1>VR Connect</h1ls>
+<h1>VR Connect</h1>
 
 #front end
 
