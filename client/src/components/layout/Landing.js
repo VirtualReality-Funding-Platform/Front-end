@@ -12,9 +12,9 @@ const Landing = ({ isAuthenticated }) => {
     <section className='landing'>
       <div className='dark-overlay'>
         <div className='landing-inner'>
-          <h1 className='x-large'>Developer Connector</h1>
+          <h1 className='x-large'>VR Connect</h1>  {/* changed title */}
           <p className='lead'>
-            Create a developer profile/portfolio, share posts and get help from
+            Create a virtual reality developer profile/portfolio, share posts and get help from  {/* changed description */}
             other developers
           </p>
           <div className='buttons'>
